@@ -286,12 +286,12 @@ function addComment(itemId, comment) {
     errors.push({ field: "phone", message: "Нет телефона" });
   }
 
-  if (!comment.comment) {
-    errors.push({ field: "name", message: "Нет комментария" });
+  if (!comment.text) {
+    errors.push({ field: "text", message: "Нет комментария" });
   }
 
-  if (!comment.star) {
-    errors.push({ field: "star", message: "Нет оценки" });
+  if (!comment.stars) {
+    errors.push({ field: "stars", message: "Нет оценки" });
   }
 
   if (errors.length) throw new ApiError(422, { errors });
